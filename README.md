@@ -55,3 +55,6 @@ We are trying to get all necessary information from your setup.py.
 * Command line scripts (entry_points.console_scripts) 
 
 If something is absent, we will add something on our own.
+## Docker
+After adding debian folder to your project, you can easily build some 
+packages with [python_deb_builder](https://github.com/nabokihms/python_deb_builder) docker image. 
