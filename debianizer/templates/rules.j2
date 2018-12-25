@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export DH_VIRTUALENV_INSTALL_ROOT={{ venvs_path }}
+EXTRA_REQUIREMENTS=--upgrade-pip --preinstall "setuptools>=17.1" --preinstall "wheel"
+DH_VENV_ARGS=--setuptools --python {{ snake }} $(EXTRA_REQUIREMENTS)
+
+%:
+	dh $@ --with python-virtualenv
+
+.PHONY: override_dh_virtualenv override_dh_strip
+
+
+override_dh_virtualenv:
+	dh_virtualenv $(DH_VENV_ARGS)
+
+override_dh_strip:
+	dh_strip --exclude=cffi

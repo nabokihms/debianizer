@@ -1,0 +1,1 @@
+recursive-include debianizer *.pyx *.j2
