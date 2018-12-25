@@ -4,7 +4,7 @@ To package your python project into `.deb` package with `dh-virtualenv` you need
 to form `debian` folder with specific information. <br>
 This tool helps to do it **in one click!**
 ## How to use
-###Install
+### Install
 from PyPi
 ```bash
 pip3 install debianizer
