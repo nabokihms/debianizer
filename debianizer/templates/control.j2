@@ -1,14 +1,14 @@
-Source: {{ package_name }}
+Source: {{ data.package_name }}
 Section: contrib/python
 Priority: extra
-Maintainer: {{ author }} <{{ email }}>
+Maintainer: {{ data.author }} <{{ data.email }}>
 Build-Depends: debhelper (>= 9), python3, dh-virtualenv (>= 1.0),
     python3-setuptools, python3-pip, python3-dev, libffi-dev
 Standards-Version: 3.9.5
-Homepage: {{ url }}
+Homepage: {{ data.url }}
 
-Package: {{ package_name }}
+Package: {{ data.package_name }}
 Architecture: any
-Pre-Depends: dpkg (>= 1.16.1), {{ python_version }}, ${misc:Pre-Depends}
+Pre-Depends: dpkg (>= 1.16.1), {{ data.python_version }}, ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: {{ description }}.
+Description: {{ data.description }}.

@@ -1,2 +1,2 @@
-{% for script in scripts %}ln -s -f {{ venvs_path }}{{ package_name }}/bin/{{ script }} /usr/bin/{{ script }}
+{% for script in data.entry_points %}ln -s -f {{ data.venvs_path }}{{ data.package_name }}/bin/{{ script }} /usr/bin/{{ script }}
 {% endfor %}
