@@ -1,7 +1,7 @@
 debianizer
-===
+==========
 To package your python project into `.deb` package with `dh-virtualenv` you need 
-to form `debian` folder with specific information. <br>
+to prepare `debian` folder with specific information. <br>
 This tool helps to do it **in one click!**
 ## How to use
 ### Install
@@ -25,11 +25,11 @@ Your project directory should look like this.
 ```
 project_directory
 ├── your_project
-│   ├── module_folder
-│   │   ├── file_one.py
-│   │   └── file_two.py
-│   ├── file_one.py
-│   └── file_two.py
+│   ├── module_folder
+│   │   ├── file_one.py
+│   │   └── file_two.py
+│   ├── file_one.py
+│   └── file_two.py
 └── setup.py
 ```
 
@@ -41,7 +41,7 @@ or
 ```bash
 debianizer --workdir project_directory
 ```
-Script will silently do his best.
+The script will silently do his best.
 To add some output you can change the log level.
 ```
 debianizer --workdir project_directory --loglevel INFO
@@ -54,7 +54,6 @@ We are trying to get all necessary information from your setup.py.
 * Package Version (version)
 * Command line scripts (entry_points.console_scripts) 
 
-If something is absent, we will add something on our own.
+We will add default info if something is absent.
 ## Docker
-After adding debian folder to your project, you can easily build some 
-packages with [python_deb_builder](https://github.com/nabokihms/python_deb_builder) docker image. 
+After adding a Debian folder to your project, you can easily build some packages with [python_deb_builder](https://github.com/nabokihms/python_deb_builder) docker image.
